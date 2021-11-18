@@ -3,17 +3,22 @@
 @tailwind utilities;
 
 .btn {
-  @apply m-1 p-4 text-gray-300 text-lg rounded-2xl active:shadow-dark-inset hover:shadow-active;
+  @apply m-1 p-4 text-gray-500 dark:text-gray-300 text-lg rounded-2xl hover:shadow-active-light dark:hover:shadow-active;
 }
 
 .btn-gray {
-  @apply bg-gradient-gray shadow-dark active:shadow-gray-inset;
+  @apply bg-gray-300 shadow-light-gray active:shadow-active-light-inset dark:bg-gradient-gray dark:shadow-dark dark:active:shadow-gray-inset;
 }
 
 .btn-orange {
-  @apply bg-gradient-orange shadow-dark active:shadow-orange-inset;
+  @apply bg-gray-300 shadow-light-gray active:shadow-active-light-inset dark:bg-gradient-orange dark:shadow-dark dark:active:shadow-orange-inset;
 }
 
 .btn-dark {
-  @apply bg-gradient-dark shadow-dark active:shadow-dark-inset;
+  @apply bg-gray-300 shadow-light-gray active:shadow-active-light-inset dark:bg-gradient-dark dark:shadow-dark dark:active:shadow-dark-inset;
+}
+
+.toggle-checkbox:checked {
+  right: 0;
+  background-color: orange;
 }

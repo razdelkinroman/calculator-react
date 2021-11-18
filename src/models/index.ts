@@ -5,3 +5,5 @@ export interface Button {
   type: string;
   span?: number;
 }
+
+export type Mode = 'light' | 'dark';

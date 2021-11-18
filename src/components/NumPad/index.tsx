@@ -24,7 +24,7 @@ const ButtonItem = (props: IButtonItemProps) => {
       setValue('0');
     }
     if (type === 'operation') {
-      setState((prev) => prev.slice(0, -1) + value + item.value);
+      setState((prev) => prev + value + item.value);
       setValue('0');
     }
     if (type === 'negate' && notInitialValue) {
@@ -37,7 +37,7 @@ const ButtonItem = (props: IButtonItemProps) => {
     }
     if (type === 'result') {
       const result = Function('return ' + state + value)();
-      setValue(result);
+      setValue(`${result}`);
       setState('');
     }
   };
@@ -46,8 +46,8 @@ const ButtonItem = (props: IButtonItemProps) => {
     <button
       className={classNames(
         'btn',
-        item.color ? `btn-${item.color}` : '',
-        item.span ? `col-span-${item.span}` : ''
+        item.span ? `col-span-${item.span}` : '',
+        item.color ? `btn-${item.color}` : ''
       )}
       onClick={() => onClickHandler(item.type)}
     >
