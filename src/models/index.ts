@@ -1,9 +1,10 @@
+export type Mode = 'light' | 'dark';
+
+export type ActionType = 'INPUT_VALUE' | 'CANCEL' | 'NEGATE' | 'OPERATION' | 'RESULT' | 'PERCENT';
 export interface Button {
   label: number;
-  value?: string;
+  type: ActionType;
   color: string;
-  type: string;
   span?: number;
+  value?: string;
 }
-
-export type Mode = 'light' | 'dark';
