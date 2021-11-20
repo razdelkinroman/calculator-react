@@ -39,5 +39,4 @@ module.exports = {
       boxShadow: ['active'],
     },
   },
-  plugins: [require('autoprefixer')],
 };

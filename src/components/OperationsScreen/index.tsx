@@ -16,7 +16,6 @@ export const OperationsScreen = ({ value, state }: IOperationsScreenProps) => {
 
     if (childWidth > parentWidth) {
       setScale((prev) => prev - 0.2);
-      console.log(childRef.current?.getBoundingClientRect());
     }
   }, [value]);
 

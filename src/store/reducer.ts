@@ -35,7 +35,6 @@ const reducer = createReducer(initialState, (builder) => {
 
   builder.addCase(negate, (state) => {
     if (state.value[0] === '-') {
-      console.log(state.value);
       state.value = state.value.substring(1);
     } else {
       state.value = `-${state.value}`;
@@ -57,7 +56,9 @@ const reducer = createReducer(initialState, (builder) => {
 
   builder.addCase(result, (state) => {
     let result;
-    if (state.value !== '0') {
+    const lastValue = state.state[state.state.length - 1];
+
+    if (isNaN(+lastValue)) {
       result = Function('return ' + state.state + state.value)();
     } else {
       result = Function('return ' + state.state)();
