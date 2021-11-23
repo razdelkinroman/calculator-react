@@ -1,7 +1,6 @@
+import React from 'react';
 import { useAppSelector } from 'hooks/useRedux';
-import { NumPad } from '../components/NumPad';
-import { OperationsScreen } from '../components/OperationsScreen';
-import { Switch } from '../components/Switch';
+import { NumPad, OperationsScreen, Switch } from 'components';
 import { Mode } from 'models';
 
 type Previous = (mode: Mode) => Mode;

@@ -21,12 +21,16 @@ export const OperationsScreen = ({ value, state }: IOperationsScreenProps) => {
 
   return (
     <div ref={parentRef} className="h-44 flex flex-col pb-2">
-      <p className="flex flex-grow text-gray-500 dark:text-gray-300 opacity-50 text-2xl justify-end items-end pb-2 mt-2 break-all overflow-hidden">
+      <p
+        data-testid="display_state"
+        className="flex flex-grow text-gray-500 dark:text-gray-300 opacity-50 text-2xl justify-end items-end pb-2 mt-2 break-all overflow-hidden"
+      >
         {state}
       </p>
 
       <p
         ref={childRef}
+        data-testid="display_value"
         className="text-gray-500 dark:text-white text-5xl self-end"
         style={{ transform: `scale(${scale},${scale})`, transformOrigin: 'right' }}
       >

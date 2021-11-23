@@ -7,4 +7,5 @@ export interface Button {
   color: string;
   span?: number;
   value?: string;
+  dti?: string;
 }

@@ -1,7 +1,9 @@
-import { buttons } from './config';
-import { Button } from '../../models';
-import { classNames } from '../../utils/classNames';
+import React from 'react';
 import { useAppDispatch } from 'hooks/useRedux';
+import { Button } from 'models';
+import { classNames } from 'utils/classNames';
+
+import { buttons } from './config';
 interface IButtonItemProps {
   items: Button[];
 }
@@ -18,6 +20,7 @@ const ButtonItems = (props: IButtonItemProps) => {
       {items.map((item) => (
         <button
           key={item.label}
+          data-testid={`btn-num-${item.dti}`}
           className={classNames(
             'btn',
             item.span ? `col-span-${item.span}` : '',

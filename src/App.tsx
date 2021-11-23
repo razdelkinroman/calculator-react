@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Calculator } from './containers';
-import { classNames } from './utils/classNames';
+import { Calculator } from 'containers';
+import { classNames } from 'utils/classNames';
 
 import { Mode } from 'models';
 

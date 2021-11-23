@@ -7,7 +7,7 @@ export interface CalcState {
   state: string;
 }
 
-const initialState: CalcState = {
+export const initialState: CalcState = {
   value: '0',
   state: '',
 };

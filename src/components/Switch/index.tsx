@@ -1,3 +1,4 @@
+import React from 'react';
 interface ISwitchProps {
   onClick: () => void;
 }
